@@ -6,4 +6,4 @@ fi
 echo "Cleaning $OUTPUT_DIR"
 rm -rf $OUTPUT_DIR
 echo "Building $DIR_NAME to $OUTPUT_DIR"
-slidev build --base /slides/$DIR_NAME/ --out $OUTPUT_DIR
+slidev build --base /$DIR_NAME/ --out $OUTPUT_DIR
