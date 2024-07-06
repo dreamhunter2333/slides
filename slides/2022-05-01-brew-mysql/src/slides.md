@@ -3,6 +3,7 @@ theme: seriph
 background: #fafafa
 class: 'text-center'
 highlighter: shiki
+routerMode: hash
 ---
 
 # Mac 安装配置 - MySQL 社区版

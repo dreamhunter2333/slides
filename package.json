@@ -1,17 +1,17 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "slidev build",
-    "dev": "slidev",
-    "export": "slidev export --dark"
-  },
-  "dependencies": {
-    "@slidev/cli": "^0.30.3",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
-  },
   "name": "slides",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:all": "pnpm -r build",
+    "dev:all": "pnpm -r dev",
+    "export:all": "pnpm -r export"
+  },
   "devDependencies": {
-    "playwright-chromium": "^1.21.1"
+    "@slidev/cli": "^0.49.16",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
+    "http-server": "^14.1.1",
+    "playwright-chromium": "^1.45.1"
   }
 }

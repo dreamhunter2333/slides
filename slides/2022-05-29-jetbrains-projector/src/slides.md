@@ -3,6 +3,7 @@ theme: seriph
 background: #fafafa
 class: 'text-center'
 highlighter: shiki
+routerMode: hash
 ---
 
 # 在 Linux 或 WSL 上使用 Projector Server 安装、配置和运行 JetBrains IDEs

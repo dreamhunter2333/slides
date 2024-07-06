@@ -20,4 +20,5 @@ def main(input_file):
     for i, (png, _) in enumerate(im.frames):
         png.save(f"{input_file}-{i}.png")
 
+
 main()
