@@ -10,8 +10,6 @@ function getDirectoryContents(directory) {
         return {
             name: item,
             path: itemPath,
-            size: stats.isDirectory() ? '-' : `${(stats.size / 1024).toFixed(2)} KB`,
-            modified: stats.mtime.toLocaleString(),
             isDirectory: stats.isDirectory(),
         };
     });
@@ -22,8 +20,6 @@ function generateIndexContent(contents) {
     const rows = contents.map(item => `
         <tr>
             <td><a href="./${item.name}${item.isDirectory ? '/' : ''}">${item.name}</a></td>
-            <td>${item.size}</td>
-            <td>${item.modified}</td>
         </tr>
     `).join('\n');
 
@@ -55,8 +51,6 @@ function generateIndexContent(contents) {
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Size</th>
-                <th>Last Modified</th>
             </tr>
         </thead>
         <tbody>
