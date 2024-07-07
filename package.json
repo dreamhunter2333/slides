@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:all": "pnpm -r build",
+    "build:all": "pnpm -r build && node index.js",
     "dev:all": "pnpm -r dev",
     "export:all": "pnpm -r export"
   },
