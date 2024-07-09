@@ -2,8 +2,10 @@
 import { computed } from 'vue'
 import { darkTheme } from 'naive-ui'
 import { useDark, useToggle } from '@vueuse/core'
+import { useIsMobile } from './composables'
 import slidesData from './slides.json';
 
+const isMobile = useIsMobile()
 const isHome = computed(() => !slidesData.map(
   (slide) => slide.path
 ).some(
@@ -33,7 +35,7 @@ const theme = computed(() => (isDark.value ? darkTheme : null))
       </n-page-header>
     </n-layout-header>
     <div v-if="isHome" style="margin: 20px;">
-      <n-grid :cols="3" :y-gap="20" :x-gap="20">
+      <n-grid :cols="isMobile ? 1 : 3" :y-gap="20" :x-gap="20">
         <n-gi v-for="(slide, index) in slidesData" :key="index">
           <n-card tag="a" :href="`/${slide.path}`" target="_blank" :bordered="false" embedded :title="slide.title"
             style="height: 40vh;">
