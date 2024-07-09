@@ -40,6 +40,9 @@ const theme = computed(() => (isDark.value ? darkTheme : null))
             <template #cover>
               <iframe :src="`/${slide.path}`" style="width: 100%; border: none; pointer-events: none;"></iframe>
             </template>
+            <template #footer>
+              {{ slide.path }}
+            </template>
           </n-card>
         </n-gi>
       </n-grid>
