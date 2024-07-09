@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node ../scripts/genetate.js && vite",
-    "build": "node ../scripts/genetate.js && vue-tsc -b && vite build --outDir ../dist"
+    "dev": "python3 ../scripts/home.py && vite",
+    "build": "python3 ../scripts/home.py && vue-tsc -b && vite build --outDir ../dist"
   },
   "dependencies": {
     "@vueuse/core": "^10.11.0",
