@@ -16,6 +16,7 @@ def generate():
             "path": item,
             "title": title
         })
+    contents.sort(key=lambda x: x["path"], reverse=True)
 
     with open("src/slides.json", 'w', encoding='utf-8') as f:
         json.dump(contents, f, ensure_ascii=False, indent=4)

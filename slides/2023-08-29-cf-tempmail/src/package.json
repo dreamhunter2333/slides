@@ -5,6 +5,6 @@
     "scripts": {
         "build": "../../../scripts/build.sh",
         "dev": "slidev",
-        "export": "slidev export --dark"
+        "export": "slidev export --format png"
     }
 }
